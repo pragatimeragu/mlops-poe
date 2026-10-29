@@ -11,7 +11,8 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'py -3.10 -m venv .venv'
+                bat '"C:\\Users\\aksha\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" --version'
+                bat '"C:\\Users\\aksha\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" -m venv .venv'
                 bat '.venv\\Scripts\\python.exe -m pip install --upgrade pip'
                 bat '.venv\\Scripts\\python.exe -m pip install pytest pandas==2.2.3 evidently==0.7.23'
             }
